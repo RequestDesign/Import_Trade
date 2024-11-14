@@ -1,0 +1,208 @@
+.dropdown {
+    // .dropdown__label
+
+    &__label {
+    }
+}
+
+.select {
+    position: relative;
+
+    // .select__body
+
+    &__body {
+        position: relative;
+    }
+
+    // .select__title
+
+    &__title {
+        position: relative;
+        z-index: 3;
+
+        width: 100%;
+
+        background-color: $white;
+        cursor: pointer;
+    }
+
+    // .select__value
+
+    &__value {
+        padding-bottom: 2rem;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+
+        width: 100%;
+        border-bottom: 1px solid $gray;
+
+        > * {
+            flex: 1 1 auto;
+        }
+
+        &::after {
+            content: '';
+
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex: 0 0 1.6rem;
+
+            width: 1.6rem;
+            height: 1.6rem;
+
+            background: url(./assets/images/icons/sel-arr.svg) center / contain no-repeat;
+
+            transition: transform 0.3s ease;
+        }
+        &._has-label {
+            &::before {
+                content: attr(data-sel-label);
+
+                color: $gray;
+
+                transition: color 0.3s ease;
+
+                ._is-filled & {
+                    display: none;
+                }
+            }
+        }
+
+        @media (max-width: 48em) {
+            padding-bottom: 1.6rem;
+
+            &::after {
+                flex: 0 0 3.2rem;
+
+                width: 3.2rem;
+                height: 3.2rem;
+            }
+        }
+    }
+
+    // .select__content
+
+    &__content {
+        margin-right: auto;
+        // hide / show selected value
+        ._has-label & {
+            &:not(._is-filled &) {
+                display: none;
+            }
+        }
+    }
+
+    // .select__text
+
+    &__text {
+        flex: 1 1 auto;
+    }
+
+    // .select__input
+
+    &__input {
+        width: 100%;
+        height: 100%;
+
+        background-color: transparent;
+    }
+
+    // .select__options
+
+    &__options {
+        position: absolute;
+        z-index: 2;
+        top: 95%;
+        left: 0;
+
+        min-width: 100%;
+        border: 1px solid $gray;
+
+        background-color: $white;
+    }
+
+    // .select__option
+    &__option {
+        padding: 1.6rem;
+        width: 100%;
+        transition:
+            background-color 0.3s ease,
+            color 0.3s ease;
+        &:hover {
+            color: $red;
+
+            background-color: #f5f5f5;
+        }
+
+        &._is-selected {
+            color: $red;
+
+            background-color: #f5f5f5;
+        }
+        @media (any-hover: hover) {
+            &:hover {
+                &:not(&.select__subtitle) {
+                    cursor: pointer;
+                }
+            }
+        }
+        @media (max-width: 48em) {
+            padding: 2rem;
+        }
+    }
+
+    // .select__group
+
+    &__group {
+        display: inline-flex;
+        align-items: flex-start;
+        flex-direction: column-reverse;
+    }
+
+    // .select__asset
+
+    &__asset {
+    }
+
+    // .select__text
+
+    &__text {
+    }
+
+    // .select__hint
+
+    &__hint {
+    }
+
+    // .select__subtitle
+
+    &__subtitle {
+        cursor: text;
+    }
+
+    // select state
+    &._is-opened {
+        z-index: 5;
+        .select__value::after {
+            transform: rotate(-180deg);
+        }
+    }
+    &._has-error {
+        &:not(&._is-filled, &._is-opened) {
+            .select__value._select-label {
+                &::before {
+                    color: $red;
+                }
+            }
+        }
+    }
+}
+
+// list
+._select-list {
+    cursor: pointer;
+}

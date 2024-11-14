@@ -1,0 +1,35 @@
+.about-franchising {
+    &__container {
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width: 48em) {
+            flex-direction: column;
+            justify-content: stretch;
+        }
+    }
+
+    &__heading {
+        margin-bottom: 4.8rem;
+
+        text-transform: uppercase;
+
+        @media (min-width: 48em) {
+            margin-bottom: 0;
+
+            max-width: 58.5rem;
+        }
+    }
+
+    &__text-wrap {
+        padding-top: 3.2rem;
+
+        border-top: 1px solid $gray;
+    }
+
+    &__text {
+        @media (min-width: 48em) {
+            max-width: 76.2rem;
+        }
+    }
+}

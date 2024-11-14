@@ -1,0 +1,233 @@
+.brand {
+
+    &__head {
+        margin-bottom: 5rem;
+        @media (max-width: 48em) {
+            margin-bottom: 6.4rem;
+        }
+    }
+
+    &__title {
+        display: flex;
+        margin-bottom: 20rem;
+        @media (max-width: 48em) {
+            flex-direction: column;
+        }
+        span {
+            display: block;
+            font-size: 4.8rem;
+            line-height: 5.6rem;
+            width: 71.7rem;
+            margin-right: 22rem;
+            @media (max-width: 48em) {
+                margin-right: 0;
+                width: 100%;
+                font-size: 4.8rem;
+                line-height: 6rem;
+                margin-bottom: 3.2rem;
+                br {
+                    display: none;
+                }
+            }
+        }
+
+        &-text {
+            width: 65.5rem;
+            @media (max-width: 48em) {
+                width: 100%;
+            }
+            p {
+                margin-bottom: 2rem;
+                @media (max-width: 48em) {
+                    margin-bottom: 3rem;
+                }
+            }
+
+            p:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        border: 0.1rem solid #AAAAAA;
+        @media (max-width: 48em) {
+            flex-direction: column;
+            border: 0.1rem solid #AAAAAA;
+        }
+    }
+
+    &__box {
+        width: 25%;
+        height: 43rem;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.2s;
+        &:hover {
+            .brand__box-image {
+                visibility: hidden;
+                opacity: 0;
+                transition: opacity .2s;
+            }
+
+            .brand__box-logo-white {
+                visibility: hidden;
+                opacity: 0;
+                height: 0;
+                width: 0;
+                transition: opacity .2s linear;
+
+            }
+
+            .brand__box-logo-color {
+                visibility: visible;
+                opacity: 1;
+                transition: opacity .2s linear;
+
+            }
+        }
+        @media (max-width: 48em) {
+            width: 100%;
+            height: 63rem;
+            border-bottom: 0.1rem solid #AAAAAA;
+            padding: 3.2rem;
+        }
+        &-image {
+            position: absolute;
+            top: 0;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transition: opacity .2s;
+            visibility: visible;
+            opacity: 1;
+            @media (max-width: 48em) {
+                position: relative;
+                height: 56.6rem;
+
+                img {
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+
+            }
+            &::after {
+                content:'';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background-color: #161616;
+                opacity: 0.54;
+                z-index: 1;
+                display: block;
+                
+            }
+          
+        }
+
+        &-logo {
+            width: 26.8rem;
+            height: 20rem;
+            position: relative;
+            z-index: 2;
+            @media (max-width: 48em) {
+                position: absolute;
+                width: 42rem;
+                height: 31.4rem;
+            }
+        }
+
+        &-logo-white {
+            visibility: visible;
+            opacity: 1;
+            transition: opacity .2s linear;
+        }
+
+        &-logo-color {
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity .2s linear;
+
+        }
+    }
+
+    &__box:last-child {
+        border-bottom: none;
+    }
+
+    &__box--boboli {
+        
+        @media (max-width: 48em) {
+            border-top: none;
+            border-right: none;
+        }
+        &::after {
+            display: none;
+        }
+        .brand__box-image  {
+            display: none;
+            @media (max-width: 48em) {
+                display: block;
+            }
+
+            
+        }
+       
+
+        .brand__box-logo-mob {
+            display: none;
+            @media (max-width: 48em) {
+                display: block;
+            }
+        }
+
+        .brand__box-logo-desk {
+            @media (max-width: 48em) {
+                display: none;
+            }
+        }
+    }
+
+    &__c {
+        width: 25%;
+        height: 43rem;
+        display: block;
+        position: relative;
+        @media (max-width: 48em) {
+            display: none;
+        }
+    }
+    
+}
+
+
+.hero--brand {
+    .hero__head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        p {
+        
+            font-size: 2rem;
+            font-weight: 400;
+            line-height: 2.34rem;
+            text-align: left;
+            width: 35.7rem;
+
+        }
+    }
+}

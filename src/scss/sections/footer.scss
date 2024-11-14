@@ -1,0 +1,146 @@
+.footer {
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__main {
+        padding-bottom: 3.2rem;
+
+        display: flex;
+
+        border-bottom: 1px solid $gray;
+
+        @media (max-width: 48em) {
+            padding-bottom: 6.4rem;
+
+            flex-direction: column;
+        }
+    }
+
+    &__logo-wrap {
+        margin-right: auto;
+
+        display: flex;
+        flex-direction: column;
+        row-gap: 5rem;
+
+        max-width: 37rem;
+
+        @media (max-width: 48em) {
+            margin-right: 0;
+            margin-bottom: 6.4rem;
+
+            row-gap: 4rem;
+
+            max-width: none;
+        }
+    }
+
+    &__logo {
+        width: 23rem;
+
+        @media (max-width: 48em) {
+            width: 35.6rem;
+        }
+    }
+
+    &__text {
+        @media (max-width: 48em) {
+            max-width: 56rem;
+        }
+    }
+
+    &__nav {
+        margin-bottom: 6.4rem;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 4rem;
+
+        @media (min-width: 48em) {
+            margin-bottom: 0;
+            margin-right: 2.4rem;
+
+            grid-template-columns: repeat(2, 24.5rem);
+            gap: 2.4rem;
+        }
+    }
+
+    &__nav-link {
+    }
+}
+
+.contacts-footer {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.5rem;
+
+    @media (max-width: 48em) {
+        align-items: flex-start;
+        row-gap: 4rem;
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        column-gap: 1.2rem;
+
+        @media (max-width: 48em) {
+            column-gap: 1.6rem;
+        }
+    }
+
+    &__icon {
+        display: inline-flex;
+
+        svg {
+            width: 2.4rem;
+            height: 2.4rem;
+
+            @media (max-width: 48em) {
+                width: 4rem;
+                height: 4rem;
+            }
+        }
+    }
+}
+
+.request-design-footer {
+    padding: 6.4rem 0;
+
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    row-gap: 2.4rem;
+
+    width: 100%;
+
+    color: $gray;
+    text-align: center;
+
+    @media (min-width: 48em) {
+        padding: 3.2rem 0;
+
+        grid-template-columns: 25rem 1fr 25rem;
+        justify-items: stretch;
+    }
+
+    &__text {
+        text-align: center;
+
+        @media (min-width: 48em) {
+            justify-self: center;
+        }
+    }
+
+    &__logo {
+        width: 30.4rem;
+
+        @media (min-width: 48em) {
+            justify-self: end;
+
+            width: 18.5rem;
+        }
+    }
+}

@@ -1,0 +1,106 @@
+.request {
+    &__container {
+        display: flex;
+        flex-direction: column-reverse;
+
+        @media (min-width: 48em) {
+            display: grid;
+            grid-auto-flow: column;
+        }
+    }
+
+    &__image-wrap {
+        height: 48.2rem;
+
+        @media (max-width: 48em) {
+            &:not(&_large) {
+                display: none;
+            }
+        }
+
+        @media (min-width: 48em) {
+            flex: 0 0 43.8rem;
+            width: 43.8rem;
+            height: 100%;
+            min-height: 47.4rem;
+
+            &_large {
+                flex: 0 0 69.8rem;
+                width: 69.8rem;
+            }
+        }
+    }
+
+    &__image {
+        height: 100%;
+
+        object-fit: cover;
+    }
+
+    &__body {
+        padding: 3.2rem;
+
+        display: flex;
+        flex-direction: column;
+        border: 1px solid $gray;
+    }
+
+    &__heading {
+        margin-bottom: 2.4rem;
+
+        @media (max-width: 48em) {
+            margin-bottom: 3.2rem;
+        }
+    }
+
+    &__text {
+        margin-bottom: 8rem;
+
+        @media (max-width: 48em) {
+            margin-bottom: 4.8rem;
+        }
+    }
+}
+
+.form-request {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3.2rem;
+
+    @media (max-width: 48em) {
+        row-gap: 4.8rem;
+    }
+
+    &__fields {
+        display: flex;
+        flex-direction: column;
+        row-gap: 3.2rem;
+
+        @media (max-width: 48em) {
+            row-gap: 4rem;
+        }
+    }
+
+    &__footer {
+        display: flex;
+        flex-direction: column;
+        gap: 4.8rem;
+
+        @media (min-width: 48em) {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8.8rem;
+        }
+    }
+
+    &__text {
+        font-size: 2.8rem;
+
+        @media (min-width: 48em) {
+            max-width: 28.7rem;
+
+            font-size: 1.4rem;
+        }
+    }
+}

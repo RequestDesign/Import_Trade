@@ -1,0 +1,171 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+// html, body
+html,
+body {
+    margin: 0;
+    padding: 0;
+
+    height: 100%;
+
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1.2;
+
+    -webkit-animation: bugfix infinite 1s;
+}
+html {
+    font-family: 'Roboto';
+    font-size: 0.5208335vw;
+}
+body {
+    font-size: 2rem;
+
+    color: $black;
+    background-color: $white;
+}
+
+// input, textarea
+input,
+textarea {
+    margin: 0;
+    padding: 0;
+
+    border: none;
+
+    line-height: inherit;
+
+    background-color: transparent;
+    color: inherit;
+
+    -webkit-animation: bugfix infinite 1s;
+}
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+    margin: 0;
+
+    -webkit-appearance: none;
+}
+input[type='number'] {
+    -moz-appearance: textfield;
+}
+
+// remove outline
+button,
+input,
+a,
+textarea {
+    font: inherit;
+
+    outline: none;
+    cursor: pointer;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:active {
+        outline: none;
+    }
+}
+
+// -----
+
+a {
+    color: unset;
+}
+a,
+a:hover {
+    text-decoration: none;
+}
+
+p {
+    margin: 0;
+}
+
+img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    object-fit: contain;
+}
+
+button {
+    padding: 0;
+
+    border: none;
+
+    font: inherit;
+    text-align: inherit;
+
+    color: inherit;
+    background-color: transparent;
+}
+
+ul,
+ul li {
+    padding: 0;
+    margin: 0;
+}
+ul li {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+
+    font: inherit;
+}
+
+// ----- container
+
+.container {
+    width: 172rem;
+    margin: 0 auto;
+}
+
+// ----- section gap
+
+section {
+    margin-bottom: 15rem;
+}
+
+// ----- media queries
+
+@media (max-width: 48em) {
+    html {
+        font-size: 5px;
+        font-size: 1.5625vw;
+        font-size: calc((100 / 375) * 5vw);
+
+        -webkit-text-size-adjust: none;
+    }
+    body {
+        font-size: 3.2rem;
+
+        -webkit-text-size-adjust: none;
+    }
+
+    .container {
+        padding: 0 2rem;
+
+        width: 100%;
+    }
+}
+@media (min-width: 1920px) {
+    html {
+        font-size: 10px;
+    }
+}

@@ -1,0 +1,120 @@
+.mission {
+
+
+    &__title {
+        width: 113.6rem;
+        margin-bottom: 10rem;
+        @media (max-width: 48em) {
+            width: 100%;
+            margin-bottom: 4.8rem;
+        }
+    }
+
+    &__content {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        position: relative;
+        
+        @media (max-width: 48em) { 
+            flex-direction: column;
+            justify-content: initial;
+            &::before {
+                display: none;
+            }
+
+            &::after {
+                display: none;
+            }
+        }
+        &::before {
+            position: absolute;
+            content:'';
+            background-color: #DA251E;
+            width: 1.8rem;
+            height: 1.8rem;
+            border-radius: 50%;
+            top: 0;
+            left: 0;
+        }
+
+        &::after {
+            position: absolute;
+            content:'';
+            width: 100%;
+            background-color: #AAAAAA;
+            height: 0.2rem;
+            top: 6rem;
+        }
+    }
+
+    &__box {
+        width: 55.2rem;
+        margin-right: 3.2rem;
+        @media (max-width: 48em) { 
+            margin-right: 0;
+            width: 100%;
+            margin-bottom: 20rem;
+        }
+        &-title {
+            color: #AAAAAA;
+            margin-bottom: 6.4rem;
+            font-size: 2.8rem;
+            font-weight: 500;
+            position: relative;
+            @media (max-width: 48em) { 
+                padding-bottom: 2.4rem;
+                margin-bottom: 3.2rem;
+                padding-left: 4.8rem;
+                font-size: 4rem;
+                &::before {
+                    position: absolute;
+                    content:'';
+                    background-color: #DA251E;
+                    width: 2.4rem;
+                    height: 2.4rem;
+                    border-radius: 50%;
+                    top: 1.4rem;
+                    left: 1rem;
+                    transform: translate(-50%, 0);
+                }
+
+                &::after {
+                    width: 100%;
+                    position: absolute;
+                    content:'';
+                    left: 0;
+                    bottom: 0;
+                    height: 0.2rem;
+                    background-color: #AAAAAA;
+                }
+            }
+        }
+
+        &-text {
+         
+            font-size: 2rem;
+            font-weight: 400;
+            line-height: 2.3rem;
+            text-align: left;
+
+            @media (max-width: 48em) { 
+                
+   
+                font-size: 3.2rem;
+                font-weight: 400;
+                line-height: 3.6rem;
+                text-align: left;
+
+            }
+
+        }
+    }
+
+    &__box:last-child {
+        margin-right: 0;
+        @media (max-width: 48em) { 
+            margin-bottom: 0;
+        }
+    }
+}

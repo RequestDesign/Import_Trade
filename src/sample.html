@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Главная</title>
+</head>
+
+<body style="opacity: 0">
+    <div class="wrapper">
+        <include src="./components/header.html"></include>
+        <main>
+            <section id="hero-screen" class="hero  hero_mainpage">
+                <div class="hero__container container">
+                    <div id="hero-head" class="hero__head hero__head-simple">
+                        <span class="hero__heading h h_large">SAMPLE SALE</span>
+                        <button type="button" class="btn btn_primary hero__head-simple-btn primary-scroll" data-target=".request">
+                            <span class="btn__txt">хочу на распродажу</span>
+                        </button>
+                    </div>
+                    <div id="hero-body" class="hero__body">
+                        <div class="hero__video">
+                            <video data-videojs src="./assets/video/video.mp4"></video>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <include src="./components/_simple-d.html"></include>
+            <include src="./components/_advantages-s.html"></include>
+            <section class="request">
+                <div class="request__container container">
+                    <div class="request__image-wrap request__image-wrap_large">
+                        <img src="./assets/images/bg/request-frame.webp" alt="" class="request__image" />
+                    </div>
+                    <div class="request__body">
+                        <span class="request__heading h h_h1">Хочу на распродажу</span>
+                        <p class="request__text txt20">
+                            Вас ждут новые коллекции по выгодным ценам!
+                        </p>
+                        <form action="#" data-dev class="request__form form-request">
+                            <div class="form-request__fields">
+                                <div data-hint="Заполните поле" class="form-request__field input">
+                                    <input data-validate data-required autocomplete="off" type="text" name="form[]"
+                                        placeholder="Имя" class="input__field" />
+                                </div>
+                                <div data-hint="Заполните поле" class="form-request__field input">
+                                    <input data-tel-mask data-validate data-required autocomplete="off" type="tel"
+                                        name="form[]" placeholder="Телефон" class="input__field" />
+                                </div>
+                            </div>
+                            <div class="form-request__footer">
+                                <p class="form-request__text fw-light">
+                                    Нажимая на кнопку, Вы принимаете условия пользовательского соглашения
+                                </p>
+                                <button type="submit" class="form-request__btn btn btn_primary">
+                                    <span class="btn__txt">Отправить</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="request__image-wrap">
+                        <img src="./assets/images/bg/2ftgre4kuuod78.webp" alt="" class="request__image" />
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        <script>
+            const endDate = new Date('2024-07-02T00:00:00');
+
+
+            function updateCountdown() {
+                const now = new Date();
+                const timeDifference = endDate - now;
+
+
+                if (timeDifference <= 0) {
+                    document.getElementById('countdown').innerText = 'Время истекло';
+                    clearInterval(intervalId);
+                    return;
+                }
+
+                const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+
+                document.getElementById('countdown').innerHTML =
+                    `<div class ="countdown__inner"> <span class="number">${days}</span><span class="text">дней</span> 
+    </div>
+    <div class ="countdown__inner"><span class="number">${hours}</span><span class="text">часов</span> 
+    </div>
+    <div class ="countdown__inner"><span class="number">${minutes}</span><span class="text">минут</span></div>`;
+            }
+
+            const intervalId = setInterval(updateCountdown, 1000);
+
+            updateCountdown();
+        </script>
+        <include src="./components/footer.html"></include>
+        <include src="./components/svg.html"></include>
+    </div>
+</body>
+
+</html>

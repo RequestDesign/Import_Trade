@@ -1,0 +1,75 @@
+input[type='text'],
+input[type='email'],
+input[type='tel'],
+textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+textarea:focus,
+input:focus {
+    outline: none;
+}
+
+.input {
+    position: relative;
+
+    padding-bottom: 1rem;
+
+    display: flex;
+    line-height: 2.3rem;
+
+    border-bottom: 1px solid $gray;
+
+    transition: border-bottom 0.5s ease;
+
+    &__field {
+        flex: 1 1 auto;
+
+        &::placeholder {
+            font-size: 2rem;
+            line-height: 2.3rem;
+            color: $gray;
+        }
+    }
+
+    @media (max-width: 48em) {
+        padding-bottom: 1.6rem;
+
+        line-height: 3.6rem;
+
+        .input__field {
+            &::placeholder {
+                font-size: 3.2rem;
+            }
+        }
+    }
+
+    &._is-filled {
+        border-bottom: 1px solid $black;
+    }
+
+    &._has-error {
+        border-bottom: 1px solid $red;
+
+        .input__field {
+            &::placeholder {
+                color: $black;
+            }
+        }
+
+        &::after {
+            content: attr(data-hint);
+
+            font-family: 'Roboto Condensed';
+            font-size: 1.4rem;
+            line-height: 1.6rem;
+            color: $red;
+
+            @media (max-width: 48em) {
+                font-size: 2.4rem;
+                line-height: 2.8rem;
+            }
+        }
+    }
+}

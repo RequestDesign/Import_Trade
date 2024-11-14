@@ -1,0 +1,81 @@
+.h {
+    font-family: 'Roboto Condensed';
+    font-weight: 500;
+    text-transform: uppercase;
+
+    &_h1 {
+        font-size: 4.8rem;
+        line-height: 5.6rem;
+
+        @media (max-width: 48em) {
+            font-size: 5.2rem;
+            line-height: 6rem;
+        }
+    }
+
+    &_h2 {
+        font-size: 2.8rem;
+        line-height: 3.3rem;
+
+        @media (max-width: 48em) {
+            font-size: 4rem;
+            line-height: 4.6rem;
+        }
+    }
+
+    &_large {
+        font-size: 21rem;
+        line-height: 24.6rem;
+        text-transform: none;
+
+        @media (max-width: 48em) {
+            font-size: 8.7rem;
+            line-height: 10.4rem;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.txt20 {
+    font-size: 2rem;
+    line-height: 2.3rem;
+
+    @media (max-width: 48em) {
+        font-size: 3.2rem;
+        line-height: 3.6rem;
+    }
+}
+
+.txt18 {
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+
+    @media (max-width: 48em) {
+        font-size: 3.2rem;
+        line-height: 3.8rem;
+    }
+}
+
+.txt16 {
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+
+    @media (max-width: 48em) {
+        font-size: 2.8rem;
+        line-height: 3.2rem;
+    }
+}
+
+.txt14 {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+
+    @media (max-width: 48em) {
+        font-size: 2.8rem;
+        line-height: 3.2rem;
+    }
+}
+
+.fw-light {
+    font-weight: 300;
+}

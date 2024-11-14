@@ -1,0 +1,27 @@
+.carousel-pagination {
+    display: flex;
+    justify-content: center;
+
+    @media (max-width: 48em) {
+        column-gap: 1.2rem;
+    }
+
+    .swiper-pagination-bullet {
+        border-radius: 50%;
+
+        background-color: $gray;
+
+        transition: background-color 0.8s ease;
+
+        &.swiper-pagination-bullet-active {
+            background-color: $red;
+        }
+
+        @media (max-width: 48em) {
+            flex: 0 0 1.6rem;
+
+            width: 1.6rem;
+            height: 1.6rem;
+        }
+    }
+}

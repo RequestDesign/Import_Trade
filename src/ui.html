@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ui</title>
+        <style>
+            ul,
+            li {
+                list-style: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <main style="background-color: #e0e0e0">
+                <div
+                    style="
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        row-gap: 3rem;
+                        padding: 5rem;
+                    "
+                    class="container"
+                >
+                    <!-- typography -->
+                    <div style="text-align: center">
+                        <div class="h h_large">large text</div>
+                        <div class="h h_h1">heading</div>
+                        <div class="h h_h2">heading</div>
+                        <div class="txt20">text</div>
+                        <div class="txt18">text</div>
+                        <div class="txt18 fw-light">light text</div>
+                    </div>
+
+                    <!-- buttons -->
+                    <div style="display: flex; gap: 2rem">
+                        <button type="button" class="i-btn i-btn_arr-prev _has-hover">
+                            <svg
+                                width="32"
+                                height="12"
+                                viewBox="0 0 32 12"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path d="M32 6H2M2 6L7 1M2 6L7 11" stroke="#DA251E" stroke-width="1.5" />
+                            </svg>
+                        </button>
+                        <button type="button" class="i-btn i-btn_arr-next _has-hover">
+                            <svg
+                                width="32"
+                                height="12"
+                                viewBox="0 0 32 12"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path d="M0 6H30M30 6L25 1M30 6L25 11" stroke="#DA251E" stroke-width="1.5" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div style="display: flex; gap: 2rem">
+                        <button type="button" class="i-btn i-btn_bg">
+                            <svg
+                                width="32"
+                                height="12"
+                                viewBox="0 0 32 12"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path d="M32 6H2M2 6L7 1M2 6L7 11" stroke="#DA251E" stroke-width="1.5" />
+                            </svg>
+                        </button>
+                        <button type="button" class="i-btn i-btn_bg">
+                            <svg
+                                width="32"
+                                height="12"
+                                viewBox="0 0 32 12"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path d="M0 6H30M30 6L25 1M30 6L25 11" stroke="#DA251E" stroke-width="1.5" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div style="display: flex; flex-direction: column; align-items: center; row-gap: 2rem">
+                        <button type="button" class="btn btn_primary">
+                            <span class="btn__txt">Давайте сотрудничать</span>
+                        </button>
+                        <button type="button" class="btn btn_secondary">
+                            <span class="btn__txt">оставить заявку</span>
+                        </button>
+                    </div>
+
+                    <!-- inputs -->
+                    <form
+                        data-dev
+                        action="#"
+                        style="display: flex; flex-direction: column; align-items: center; row-gap: 2rem"
+                    >
+                        <div data-hint="Заполните поле" class="input">
+                            <input
+                                data-validate
+                                data-required
+                                autocomplete="off"
+                                type="text"
+                                name="form[]"
+                                placeholder="Имя"
+                                class="input__field"
+                            />
+                        </div>
+                    </form>
+
+                    <!-- dropdown -->
+                    <div class="dropdown">
+                        <select data-sel-label="Бренд, который Вас заинтересовал" data-show-selection>
+                            <option value="1">Original Marines</option>
+                            <option value="2">DPam</option>
+                            <option value="3">Sergent Major</option>
+                            <option value="4">boboli</option>
+                            <option value="5">jacadi</option>
+                        </select>
+                    </div>
+
+                    <!-- tabs --->
+                    <div class="tabs" data-tabs>
+                        <nav data-tabs-titles class="tabs__navigation">
+                            <button type="button" class="tabs__title tab _is-active">
+                                <span class="tab__txt">Таб №1</span>
+                            </button>
+                            <button type="button" class="tabs__title tab">
+                                <span class="tab__txt">Таб №2</span>
+                            </button>
+                        </nav>
+                        <div data-tabs-body class="tabs__content">
+                            <div class="tabs__body">Содержимое первого таба</div>
+                            <div class="tabs__body">Содержимое второго таба</div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </body>
+</html>

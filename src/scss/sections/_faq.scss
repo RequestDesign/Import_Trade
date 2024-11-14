@@ -1,0 +1,82 @@
+.faq {
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__head {
+        margin-bottom: 5rem;
+
+        @media (max-width: 48em) {
+            display: none;
+        }
+    }
+
+    &__body {
+        display: flex;
+        border: 1px solid $gray;
+
+        @media (max-width: 48em) {
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__image-wrap {
+        padding: 3.2rem;
+
+        @media (max-width: 48em) {
+            border-bottom: 1px solid $gray;
+        }
+    }
+
+    &__tabs-wrap {
+        display: flex;
+        flex-direction: column;
+
+        @media (min-width: 48em) {
+            flex: 1 1 auto;
+            flex-direction: row;
+
+            .accordion-tabs {
+                flex: 0 0 55.2rem;
+                width: 55.2rem;
+
+                &__content {
+                    padding: 3.2rem;
+
+                    height: 100%;
+                    border-right: 1px solid $gray;
+                }
+            }
+        }
+
+        @media (max-width: 48em) {
+            .accordion-tabs {
+                padding: 3.2rem;
+
+                &__text-wrap {
+                    padding-top: 3.2rem;
+                }
+
+                .tab__txt {
+                    max-width: 58rem;
+                }
+            }
+        }
+    }
+
+    &__tabs {
+    }
+
+    &__image {
+        height: 71rem;
+
+        object-fit: cover;
+
+        @media (min-width: 48em) {
+            min-height: 52.2rem;
+            width: 52rem;
+            height: 100%;
+        }
+    }
+}

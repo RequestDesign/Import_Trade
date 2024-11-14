@@ -1,0 +1,58 @@
+.application-btn {
+    box-shadow: 4px 4px 54px 0px #1A1A1A29;
+    width: 10.6rem;
+    height: 10.6rem;
+    background-color: #fff;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 3;
+    right: 2rem;
+    top: 88%;
+    @media (max-width: 48em) {
+        width: 13.6rem;
+        height: 13.6rem;
+        right: 2rem;
+        top: 102rem;
+    }
+    &__letter {
+        width: 1.6rem;
+        height: 1.6rem;
+        @media (max-width: 48em) {
+            width: 3.6rem;
+            height: 3.6rem;
+        }
+    }
+
+    &__text {
+        position: absolute;
+        width: 8.6rem;
+        height: 8.6rem;
+        animation: rotating 10s linear infinite;
+        @media (max-width: 48em) {
+            width: 11.6rem;
+            height: 11.6rem;
+        }
+        
+    }
+
+    &__content {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items:center;
+    }
+
+
+    @keyframes rotating {
+        from{
+            transform: rotate(0deg);
+        }
+        to{
+            transform: rotate(360deg);
+        }
+    }
+}
+
+

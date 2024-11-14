@@ -1,0 +1,153 @@
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>«modaperbambini»</title>
+    </head>
+    <body>
+        <div class="root">
+            <h1>«modaperbambini»</h1>
+            <h2>список страниц:</h2>
+            <ol>
+                <li>
+                    <a target="_blank" href="./home.html">главная</a>
+                </li>
+                <li>
+                    <a target="_blank" href="./franchising.html">франчайзинг</a>
+                </li>
+                <li>
+                    <a target="_blank" href="./wholesale.html">опт</a>
+                </li>
+                <li>
+                    <a target="_blank" href="./shops.html">магазины</a>
+                </li>
+                <li>
+                    <a target="_blank" href="./shop.html">интернет-магазин</a>
+                </li>
+                <li>
+                    <a target="_blank" href="./not-found.html">404</a>
+                </li>
+                <li>
+                    <a target="_blank" href="./about-company.html">О компании</a>
+                </li>
+                <li>
+                    <a target="_blank" href="./brand.html">Брэнд</a>
+                </li>
+                <li>
+                    <a target="_blank" href="./brand-d.html">Брэнд Детальная</a>
+                </li>
+                <li>
+                    <a target="_blank" href="./sample.html">Sample</a>
+                </li>
+                <li>
+                    <a target="_blank" href="./contacts-page.html">Контакты</a>
+                </li>
+             
+                
+            </ol>
+            <h2>модалки:</h2>
+            <ol>
+                <li>
+                    <button type="button" data-modal="#requestModal">оставить заявку</button>
+                </li>
+                <li>
+                    <button type="button" data-modal="#requestOpeningModal">
+                        оставить заявку на открытие
+                    </button>
+                </li>
+                <li>
+                    <button type="button" data-modal="#requestSendModal">заявка отправлена</button>
+                </li>
+            </ol>
+            <a target="_blank" href="./ui.html">*ui*</a>
+        </div>
+        <style>
+            @charset "UTF-8";
+            @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap');
+            * {
+                padding: 0;
+                margin: 0;
+                border: 0;
+                box-sizing: border-box;
+            }
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+                height: 100%;
+                width: 100%;
+                min-width: 32rem;
+                background-color: #ffffff;
+                color: #202020;
+            }
+            html {
+                font-size: 0.5208335vw;
+            }
+            body {
+                padding: 5rem 0;
+                font-size: 100%;
+                line-height: 1;
+                font-size: 1.8rem;
+                user-select: none;
+            }
+            .root {
+                font-family: 'Source Code Pro';
+            }
+            .root ul,
+            .root ol {
+                margin-bottom: 10rem;
+            }
+            .root ul li,
+            .root ol li {
+                font-size: 2.3rem;
+            }
+            .root li {
+                margin-bottom: 2rem;
+                font-size: 2rem;
+                text-transform: lowercase;
+            }
+            .root a {
+                text-decoration: none;
+            }
+            .root a {
+                color: #202020;
+                transition: color 0.5s ease;
+            }
+            .root a:visited {
+                text-decoration: none;
+                color: #202020;
+            }
+            .root a:hover {
+                color: #202020;
+                text-decoration: underline;
+            }
+            .root h1 {
+                margin-bottom: 5rem;
+                font-size: 5rem;
+                font-weight: 300;
+                text-align: center;
+            }
+            .root h2 {
+                margin-bottom: 2.5rem;
+                font-size: 2.5rem;
+                font-weight: 300;
+            }
+            .root {
+                padding: 5rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            @media (max-width: 48em) {
+                html {
+                    font-size: calc((100 / 375) * 5vw);
+                }
+                body {
+                    font-size: 2.8rem;
+                }
+            }
+        </style>
+        <include src="./components/modals.html"></include>
+        <include src="./components/svg.html"></include>
+    </body>
+</html>

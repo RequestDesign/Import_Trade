@@ -1,0 +1,204 @@
+<!-- оставить заявку -->
+<div id="requestModal" aria-hidden="true" class="modal modal_vertical">
+    <div class="modal__wrapper">
+        <div class="modal__content">
+            <div class="modal__body">
+                <div class="modal__inner">
+                    <div class="modal__image-wrap">
+                        <img
+                            src="./assets/images/bg/24_PE_CC_Ceremonie_LaValseDesBordsDeLoire_Shooting_1664.webp"
+                            alt=""
+                            class="modal__image"
+                        />
+                        <button data-close type="button" class="modal__close">
+                            <svg>
+                                <use href="#cross-icon"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="modal__inner-content">
+                        <span class="modal__heading h h_h1">оставить заявку</span>
+                        <p class="modal__text txt20">
+                            Если вы дистрибьютор детских товаров, розничный или интернет-магазин — вы можете
+                            получить эксклюзивный доступ к нашим брендам.
+                        </p>
+                        <form action="#" data-dev class="modal__form form-modal">
+                            <div class="form-modal__fields">
+                                <div data-hint="Заполните поле" class="form-modal__field input">
+                                    <input
+                                        data-validate
+                                        data-required
+                                        autocomplete="off"
+                                        type="text"
+                                        name="form[]"
+                                        placeholder="Имя"
+                                        class="input__field"
+                                    />
+                                </div>
+                                <div data-hint="Заполните поле" class="form-modal__field input">
+                                    <input
+                                        data-tel-mask
+                                        data-validate
+                                        data-required
+                                        autocomplete="off"
+                                        type="tel"
+                                        name="form[]"
+                                        placeholder="Телефон"
+                                        class="input__field"
+                                    />
+                                </div>
+                            </div>
+                            <div class="form-modal__footer">
+                                <p class="form-modal__text txt14 fw-light">
+                                    Нажимая на кнопку, Вы принимаете условия пользовательского соглашения
+                                </p>
+                                <button type="submit" class="form-modal__btn btn btn_primary">
+                                    <span class="btn__txt">Отправить заявку</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- заявка на открытие -->
+<div id="requestOpeningModal" aria-hidden="true" class="modal modal_horizontal">
+    <div class="modal__wrapper">
+        <div class="modal__content">
+            <div class="modal__body">
+                <div class="modal__inner">
+                    <button data-close type="button" class="modal__close">
+                        <svg>
+                            <use href="#cross-icon"></use>
+                        </svg>
+                    </button>
+                    <div class="modal__image-wrap">
+                        <img src="./assets/images/bg/TERRASSE-1188.webp" alt="" class="modal__image" />
+                    </div>
+                    <div class="modal__inner-content">
+                        <span class="modal__heading h h_h1">оставить заявку</span>
+                        <p class="modal__text txt20">
+                            Если вы дистрибьютор детских товаров, розничный или интернет-магазин — вы можете
+                            получить эксклюзивный доступ к нашим брендам.
+                        </p>
+                        <form data-select-single action="#" data-dev class="modal__form form-modal">
+                            <div class="form-modal__fields">
+                                <div data-hint="Заполните поле" class="form-modal__field input">
+                                    <input
+                                        data-validate
+                                        data-required
+                                        autocomplete="off"
+                                        type="text"
+                                        name="form[]"
+                                        placeholder="Имя"
+                                        class="input__field"
+                                    />
+                                </div>
+                                <div data-hint="Заполните поле" class="form-modal__field input">
+                                    <input
+                                        data-tel-mask
+                                        data-validate
+                                        data-required
+                                        autocomplete="off"
+                                        type="tel"
+                                        name="form[]"
+                                        placeholder="Телефон"
+                                        class="input__field"
+                                    />
+                                </div>
+                                <div class="form-modal__field dropdown">
+                                    <select
+                                        data-sel-label="Бренд, который Вас заинтересовал"
+                                        data-show-selection
+                                    >
+                                        <option value="1">Original Marines</option>
+                                        <option value="2">DPam</option>
+                                        <option value="3">Sergent Major</option>
+                                        <option value="4">boboli</option>
+                                        <option value="5">jacadi</option>
+                                    </select>
+                                </div>
+                              
+                                <!-- <div class="form-modal__field dropdown">
+                                    <select
+                                        data-sel-label="Город, где вы хотите открыть магазин"
+                                        data-show-selection
+                                    >
+                                        <option value="1">Москва</option>
+                                        <option value="2">Санкт-Петербург</option>
+                                        <option value="3">Пенза</option>
+                                        <option value="4">Самара</option>
+                                        <option value="5">Владивосток</option>
+                                    </select>
+                                </div> -->
+                                <div data-hint="Заполните поле" class="form-modal__field input form-modal__field--with">
+                                    <input
+                                        data-validate
+                                        data-required
+                                        autocomplete="off"
+                                        type="text"
+                                        name="form[]"
+                                        placeholder="Город, где вы хотите открыть магазин"
+                                        class="input__field"
+                                    />
+                                </div>
+                                <div class="form-modal__field dropdown">
+                                    <select
+                                        data-sel-label="Оптовое сотрудничество, франчайзинг, другое
+                                        "
+                                        data-show-selection
+                                    >
+                                        <option value="1">Да</option>
+                                        <option value="2">Нет</option>
+                                        <option value="3">Другое</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-modal__footer">
+                                <p class="form-modal__text txt14 fw-light">
+                                    Нажимая на кнопку, Вы принимаете условия пользовательского соглашения
+                                </p>
+                                <button type="submit" class="form-modal__btn btn btn_primary">
+                                    <span class="btn__txt">Отправить заявку</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- заявка отправлена -->
+<div id="requestSendModal" aria-hidden="true" class="modal modal_vertical modal_vertical_request-send">
+    <div class="modal__wrapper">
+        <div class="modal__content">
+            <div class="modal__body">
+                <div class="modal__inner">
+                    <div class="modal__image-wrap">
+                        <img src="./assets/images/bg/request-frame.webp" alt="" class="modal__image" />
+                        <button data-close type="button" class="modal__close">
+                            <svg>
+                                <use href="#cross-icon"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="modal__inner-content">
+                        <span class="modal__heading h h_h1">Спасибо за заявку</span>
+                        <p class="modal__text txt20">
+                            Если вы дистрибьютор детских товаров, розничный или интернет-магазин — вы можете
+                            получить эксклюзивный доступ к нашим брендам.
+                        </p>
+                        <a href="#" class="modal__btn btn btn_primary">
+                            <span class="btn__txt">На главную</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

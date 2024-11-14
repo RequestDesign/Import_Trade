@@ -1,0 +1,206 @@
+.brands {
+   
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__content {
+        display: grid;
+        width: 100%;
+
+        @media (min-width: 48em) {
+            margin-bottom: 3.2rem;
+
+            grid-template-columns: 1fr 113.6rem;
+            justify-content: space-between;
+            column-gap: 3.2rem;
+        }
+    }
+
+    &__info {
+        padding: 3.2rem 0;
+
+        display: flex;
+        flex-direction: column;
+        border-top: 1px solid $gray;
+        border-bottom: 1px solid $gray;
+
+        @media (max-width: 48em) {
+            margin-bottom: 3.2rem;
+        }
+    }
+
+    &__heading {
+        margin-bottom: 2.4rem;
+
+        max-width: 36rem;
+
+        @media (max-width: 48em) {
+            margin-bottom: 3.2rem;
+
+            max-width: 39rem;
+        }
+    }
+
+    &__swiper-navigation {
+        display: none;
+
+        @media (min-width: 48em) {
+            margin-bottom: 3.2rem;
+
+            display: flex;
+            flex: 1 1 auto;
+            column-gap: 2.4rem;
+        }
+    }
+
+    &__text-wrap {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+
+        @media (min-width: 48em) {
+            max-width: 51rem;
+        }
+    }
+
+    &__images {
+        position: relative;
+
+        height: 33.4rem;
+
+        @media (min-width: 48em) {
+            height: 100%;
+            min-height: 55.5rem;
+        }
+    }
+
+    &__group {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        display: flex;
+        column-gap: 3.2rem;
+        height: 100%;
+        width: 100%;
+
+        transition:
+            opacity 0.5s ease,
+            visibility 0.5s ease;
+
+        &:not(&._is-active) {
+            opacity: 0;
+            visibility: hidden;
+            transition:
+                opacity 0.5s ease 0.5s,
+                visibility 0.5s ease 0.5s;
+        }
+    }
+
+    &__image-wrap {
+        width: 100%;
+        min-height: 100%;
+    }
+
+    &__image {
+        height: 100%;
+
+        object-fit: cover;
+    }
+
+    &__carousel {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2rem;
+        min-width: 0;
+
+        @media (min-width: 48em) {
+            padding-bottom: 3.2rem;
+
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            column-gap: 9.4rem;
+            border-bottom: 1px solid $gray;
+        }
+    }
+
+    &__swiper {
+        @media (max-width: 48em) {
+            width: 100%;
+        }
+    }
+
+    &__btn {
+        @media (min-width: 48em) {
+            flex: 0 0 25.2rem;
+        }
+    }
+
+    &__swiper-wrapper {
+        @media (min-width: 48em) {
+            &.swiper-wrapper {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                column-gap: 9.4rem;
+            }
+        }
+    }
+
+    &__carousel-pagination {
+        margin-bottom: 3.2rem;
+        padding-bottom: 3.2rem;
+
+        border-bottom: 1px solid $gray;
+
+        @media (min-width: 48em) {
+            display: none;
+        }
+    }
+}
+
+.slide-brands {
+    &.swiper-slide {
+        width: auto;
+
+        @media (max-width: 48em) {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    &__icon {
+        transition: filter 0.5s ease;
+
+        &:not(._is-active &, .swiper-slide-active &) {
+            filter: grayscale(1);
+            cursor: pointer;
+            transition: filter 0.2s ease-in-out;
+            &:hover {
+                filter: grayscale(0);
+                
+                
+            }
+        }
+
+        svg {
+            width: 20.1rem;
+            height: 15rem;
+            filter: grayscale(1);
+            cursor: pointer;
+            transition: filter 0.2s ease-in-out;
+            &:hover {
+                filter: grayscale(0);
+                
+                
+            }
+            @media (max-width: 48em) {
+                width: 42rem;
+                height: 31.4rem;
+            }
+        }
+    }
+}

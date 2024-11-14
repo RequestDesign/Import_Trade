@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Главная</title>
+</head>
+
+<body style="opacity: 0">
+    <div class="wrapper">
+        <include src="./components/header.html"></include>
+        <main>
+            <section id="animate-hero" class="hero">
+                <div class="hero__container container">
+                    <div class="hero__head">
+                        <span class="hero__heading h h_large">MODA PER BAMBINI</span>
+                    </div>
+                    <div class="hero__body">
+                        <div class="hero__carousel">
+                            <div class="hero__swiper swiper">
+                                <ul class="hero__swiper-wrapper swiper-wrapper">
+                                    <li class="hero__swiper-slide swiper-slide-hero swiper-slide">
+                                        <div class="swiper-slide-hero__image-wrap">
+                                            <img class="swiper-slide-hero__image _desktop-only"
+                                                src="./assets/images/about-company/bg.webp" alt="" />
+                                            <img class="swiper-slide-hero__image _mobile-only"
+                                                src="./assets/images/about-company/bgmob.webp" alt="" />
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+            <include src="./components/_mission.html"></include>
+            <include src="./components/_history.html"></include>
+            <include src="./components/_about-p.html"></include>
+            <include src="./components/_show-d.html"></include>
+        </main>
+        <include src="./components/footer.html"></include>
+        <include src="./components/svg.html"></include>
+    </div>
+</body>
+
+</html>

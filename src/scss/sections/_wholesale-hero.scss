@@ -1,0 +1,175 @@
+.wholesale-hero {
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__main {
+        margin-bottom: 20rem;
+
+        display: flex;
+
+        gap: 3.2rem;
+
+        @media (max-width: 48em) {
+            flex-direction: column;
+            gap: 4.8rem;
+        }
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+
+        @media (min-width: 48em) {
+            flex: 1 1 auto;
+        }
+    }
+
+    &__head {
+        margin-bottom: 14.5rem;
+        padding-top: 2.2rem;
+        padding-bottom: 1.6rem;
+
+        border-bottom: 1px solid $gray;
+
+        @media (max-width: 48em) {
+            margin-bottom: 3.2rem;
+            padding: 3.2rem 0;
+        }
+    }
+
+    &__heading {
+        display: block;
+
+        @media (max-width: 48em) {
+            max-width: 52rem;
+        }
+    }
+
+    &__text-wrap {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+
+        @media (min-width: 48em) {
+            max-width: 59.6rem;
+        }
+    }
+
+    &__images {
+        @media (min-width: 48em) {
+            display: flex;
+            column-gap: 3.2rem;
+            height: 100%;
+            min-height: 64rem;
+        }
+    }
+
+    &__image-wrap {
+        height: 52.4rem;
+        width: 40.7rem;
+
+        &_large {
+            height: 49.4rem;
+            width: 100%;
+
+            @media (min-width: 48em) {
+                width: 55.2rem;
+                height: 100%;
+            }
+        }
+    }
+
+    &__image {
+        height: 100%;
+
+        object-fit: cover;
+    }
+
+    &__image-group {
+        display: flex;
+        flex-direction: column;
+        row-gap: 6.5rem;
+
+        .wholesale-hero__image-wrap {
+            margin-bottom: auto;
+        }
+
+        @media (max-width: 48em) {
+            display: none;
+        }
+    }
+
+    &__btn {
+        @media (min-width: 48em) {
+            align-self: flex-start;
+        }
+    }
+}
+
+.brands-carousel {
+    padding: 3.2rem 0;
+
+    border-top: 1px solid $gray;
+    border-bottom: 1px solid $gray;
+
+    @media (max-width: 48em) {
+        padding: 4rem 0;
+    }
+
+    &__swiper-wrapper {
+        align-items: center;
+
+        @media (min-width: 48em) {
+            &.swiper-wrapper {
+                display: grid;
+                grid-template-columns: repeat(5, auto);
+                column-gap: 10rem;
+            }
+        }
+        &.swiper-wrapper {
+            transition-timing-function: linear;
+        }
+    }
+
+    &__swiper {
+        &.swiper {
+            margin: 0;
+        }
+    }
+}
+
+.slide-brands-carousel {
+    &.swiper-slide {
+        width: auto;
+
+        @media (max-width: 48em) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 42rem;
+        }
+    }
+
+    &__icon {
+        svg {
+            max-width: 26.8rem;
+            height: 20rem;
+            filter: grayscale(1);
+            cursor: pointer;
+            transition: filter 0.2s ease-in-out;
+            &:hover {
+                filter: grayscale(0);
+                
+                
+            }
+
+            @media (max-width: 48em) {
+                max-width: none;
+                width: 90%;
+                height: auto;
+            }
+        }
+    }
+}

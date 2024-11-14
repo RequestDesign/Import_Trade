@@ -1,0 +1,188 @@
+.simple-d {
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        column-gap: 6rem;
+        @media (max-width: 48em) {
+            flex-direction: column;
+            position: relative;
+            padding-top: 20rem;
+        }
+    }
+
+    &__image {
+        width: 55.2rem;
+        height: 52.6rem;
+        @media (max-width: 48em) {
+            width: 100%;
+            height: 66.7rem;
+            margin-bottom: 6.4rem;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        width: 70rem;
+        @media (max-width: 48em) {
+            margin-bottom: 6.4rem;
+            width: 100%;
+        }
+    }
+
+    &__timer {
+        @media (max-width: 48em) {
+            position: absolute;
+            top: 0;
+        }
+        span {
+            display: block;
+            font-size: 2.8rem;
+            font-weight: 500;
+            line-height: 3.2rem;
+            margin-bottom: 3.2rem;
+            @media (max-width: 48em) {
+                font-size: 4rem;
+                margin-bottom: 5.2rem;
+            }
+        }
+    }
+
+    #countdown {
+        display: flex;
+
+        .number {
+            display: block;
+            font-size: 4.8rem;
+            font-weight: 500;
+            text-align: left;
+            color: $red;
+            margin-right: 1rem;
+            @media (max-width: 48em) {
+                font-size: 5.2rem;
+                margin-right: 1.2rem;
+            }
+        }
+
+        .text {
+            font-size: 2rem;
+            font-weight: 400;
+            text-align: left;
+            padding-top: 1rem;
+            @media (max-width: 48em) {
+                font-size: 3.2rem;
+                padding-top: 0.2rem;
+            }
+        }
+
+        .countdown__inner {
+            display: flex;
+
+            margin-right: 1.6rem;
+        }
+
+        .countdown__inner:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__mini-image {
+        width: 26rem;
+        height: 26rem;
+        @media (max-width: 48em) {
+            display: none;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__content-wrap {
+        margin-top: auto;
+    }
+
+    &__text {
+        width: 100%;
+        font-size: 2rem;
+        font-weight: 400;
+        line-height: 2.3rem;
+        text-align: left;
+        margin-bottom: 5rem;
+        @media (max-width: 48em) {
+            width: 100%;
+            font-size: 3.2rem;
+            line-height: 3.6rem;
+            margin-bottom: 4.8rem;
+        }
+    }
+
+    &__inner {
+        display: flex;
+        @media (max-width: 48em) {
+            flex-direction: column;
+        }
+    }
+
+    &__info {
+        margin-right: 3.2rem;
+        @media (max-width: 48em) {
+            margin-right: 0;
+            margin-bottom: 4rem;
+        }
+        strong {
+            display: block;
+            font-size: 2.8rem;
+            font-weight: 500;
+            line-height: 3.2rem;
+            text-align: left;
+            position: relative;
+            margin-bottom: 1.6rem;
+            padding-left: 2.5rem;
+            @media (max-width: 48em) {
+                margin-bottom: 3.4rem;
+                padding-left: 4.8rem;
+                font-size: 4rem;
+            }
+            &::before {
+                position: absolute;
+                content: '';
+                width: 1.8rem;
+                height: 1.8rem;
+                background-color: $red;
+                left: 0;
+                border-radius: 50%;
+                top: 50%;
+                transform: translate(0, -50%);
+                @media (max-width: 48em) {
+                    width: 2.4rem;
+                    height: 2.4rem;
+                }
+            }
+        }
+
+        span {
+            display: block;
+            font-size: 2rem;
+            font-weight: 400;
+            line-height: 2.3rem;
+            text-align: left;
+            @media (max-width: 48em) {
+                font-size: 3.2rem;
+            }
+        }
+    }
+
+    &__info:last-child {
+        margin-right: 0;
+        @media (max-width: 48em) {
+            margin-bottom: 0;
+        }
+    }
+}

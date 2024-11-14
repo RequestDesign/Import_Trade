@@ -1,0 +1,101 @@
+.contacts-map {
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__heading {
+        margin-bottom: 5rem;
+
+        @media (max-width: 48em) {
+            margin-bottom: 4.8rem;
+        }
+    }
+
+    &__body {
+        display: flex;
+        gap: 2.4rem;
+
+        @media (max-width: 48em) {
+            flex-direction: column;
+            gap: 6.4rem;
+        }
+    }
+
+    &__content {
+        @media (min-width: 48em) {
+            flex: 1 1 auto;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 3.2rem;
+
+        @media (min-width: 48em) {
+            row-gap: normal;
+            height: 100%;
+        }
+    }
+
+    &__list-item {
+        padding-bottom: 3.2rem;
+
+        display: flex;
+        flex-direction: column-reverse;
+        row-gap: 3.2rem;
+        border-bottom: 1px solid $gray;
+
+        @media (min-width: 48em) {
+            padding-bottom: 2.4rem;
+
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            row-gap: normal;
+
+            &:not(:last-child) {
+                margin-bottom: 2.4rem;
+            }
+
+            &:nth-last-child(2) {
+                margin-bottom: auto;
+            }
+        }
+    }
+
+    &__text {
+        font-family: 'Roboto Condensed';
+        font-weight: 500;
+        font-size: 2.8rem;
+        line-height: 3.3rem;
+
+        @media (max-width: 48em) {
+            font-size: 3.6rem;
+            line-height: 4.2rem;
+        }
+    }
+
+    &__map {
+        height: 96rem;
+
+        @media (min-width: 48em) {
+            flex: 0 0 84.8rem;
+
+            height: 58rem;
+        }
+    }
+}
+
+.marker {
+    svg {
+        width: 4.6rem;
+        height: 6.6rem;
+
+        @media (max-width: 48em) {
+            width: 6.4rem;
+            height: 7.2rem;
+        }
+    }
+}

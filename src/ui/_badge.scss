@@ -1,0 +1,12 @@
+.badge {
+    padding: 1.2rem 3.2rem;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $black;
+
+    @media (max-width: 48em) {
+        padding: 1.2rem 6.4rem;
+    }
+}

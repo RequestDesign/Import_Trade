@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://api-maps.yandex.ru/v3/?apikey=402f83d9-3e90-4726-b547-87890093893a&lang=ru_RU"></script>
+    <title>Главная</title>
+</head>
+
+<body style="opacity: 0">
+    <div class="wrapper">
+        <include src="./components/header.html"></include>
+        <main>
+            <section class="contacts-p">
+                <div class="container">
+                    <div class="contacts-p__title">
+                        Контакты
+                    </div>
+                    <div class="contacts-p__wrapper">
+                        <div class="contacts-p__left">
+                            <div class="contacts-p__image">
+                                <img src="./assets/images/contactsp.png" alt="">
+                            </div>
+                        </div>
+                        <div class="contacts-p__right">
+                            <div class="contacts-p__box">
+                                <div class="contacts-p__box-title">
+                                    <span>Адрес</span>
+                                    <strong>г. Москва, ул. Бауманская, д.11 строение 8</strong>
+                                </div>
+                                <div class="contacts-p__box-text">
+                                    <p>м. Бауманская, из метро выход на Бауманскую улицу, переходите дорогу и идете по правой стороне до дома №11, строение 8.</p>
+                                    <p>Въезд на территорию через шлагбаум.</p>
+                                </div>
+                            </div>
+                            <div id="contacts-map" class="contacts-map__map"></div>
+                            <div class="contacts-p__box">
+
+                            </div>
+                            <div class="contacts-p__box">
+                                <div class="contacts-p__box-title">
+                                    <span>Телефон</span>
+                                </div>
+                                <div class="contacts-p__box-info">
+                                    <a href="#">+7(499) 763-35-51</a>
+                                    <span>Общий</span>
+                                </div>
+                                <div class="contacts-p__box-info">
+                                    <a href="#">+7(985) 990-07-50</a>
+                                    <span>Ведущий менеджер отдела франчайзинга</span>
+                                </div>
+                                <div class="contacts-p__box-info">
+                                    <a href="#">+7(916) 038-54-55</a>
+                                    <span>Руководитель отдела франчайзинга</span>
+                                </div>
+                            </div>
+                            <div class="contacts-p__box">
+                                <div class="contacts-p__box-title">
+                                    <span>Телефон</span>
+                                    <a href="#">admin@modaperbambini.ru</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+        </main>
+
+        <include src="./components/footer.html"></include>
+        <include src="./components/svg.html"></include>
+    </div>
+</body>
+
+</html>

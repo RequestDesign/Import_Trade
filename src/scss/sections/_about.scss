@@ -1,0 +1,152 @@
+.about {
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__head {
+        margin-bottom: 5rem;
+    }
+
+    &__heading {
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+
+        @media (min-width: 48em) {
+            flex-direction: row;
+            gap: 14.7rem;
+
+            border: 1px solid $gray;
+        }
+    }
+
+    &__image-wrap {
+        @media (min-width: 48em) {
+            padding: 3.2rem;
+
+            border-right: 1px solid $gray;
+        }
+    }
+
+    &__image {
+        height: 49.4rem;
+
+        object-fit: cover;
+
+        @media (min-width: 48em) {
+            width: 66.6rem;
+            height: 100%;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+
+        @media (min-width: 48em) {
+            padding: 3.2rem;
+
+            display: grid;
+            grid-template: repeat(2, auto) / repeat(2, 1fr);
+            align-content: start;
+            flex: 1 1 auto;
+        }
+    }
+
+    &__text {
+        margin-bottom: 4rem;
+
+        display: flex;
+        flex-direction: column;
+        row-gap: 2rem;
+
+        @media (min-width: 48em) {
+            margin-bottom: 0;
+
+            align-items: flex-start;
+            row-gap: 1rem;
+
+            max-width: 41.1rem;
+        }
+    }
+
+    &__btn {
+        justify-self: start;
+    }
+
+    &__numbers {
+        margin-bottom: 5.6rem;
+
+        @media (min-width: 48em) {
+            margin-bottom: 0;
+
+            grid-row: span 2;
+            justify-self: end;
+        }
+    }
+}
+
+.numbers-about {
+    display: flex;
+    justify-content: space-between;
+    gap: 3.4rem;
+
+    @media (min-width: 48em) {
+        flex-direction: column;
+        justify-content: stretch;
+        row-gap: 2.4rem;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.2rem;
+
+        max-width: 22.4rem;
+
+        @media (max-width: 48em) {
+            row-gap: 2.4rem;
+
+            max-width: 21.1rem;
+        }
+    }
+
+    &__text {
+        color: $gray;
+    }
+}
+
+.tween-heading {
+    display: flex;
+    flex-direction: column;
+
+    span {
+        --width: 0;
+
+        @media (min-width: 48em) {
+            position: relative;
+
+            &::before {
+                content: attr(data-text);
+
+                position: absolute;
+                z-index: 1;
+
+                width: var(--width);
+
+                color: $black;
+                white-space: nowrap;
+
+                overflow: hidden;
+            }
+        }
+    }
+
+    @media (min-width: 48em) {
+        color: $gray;
+    }
+}

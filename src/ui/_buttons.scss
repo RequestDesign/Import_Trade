@@ -1,0 +1,215 @@
+.btn {
+    display: inline-flex;
+    align-items: center;
+
+    &_primary {
+        position: relative;
+
+        padding: 1.6rem 3.2rem;
+
+        height: 5.1rem;
+        border-radius: 10rem;
+
+        background-color: $black;
+
+        overflow: hidden;
+
+        &::before {
+            content: '';
+
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            background-color: $red;
+
+            transition: transform 0.5s ease;
+        }
+
+        .btn__txt {
+            position: relative;
+            z-index: 2;
+
+            font-size: 1.6rem;
+            line-height: 1.9rem;
+            color: $white;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                &::before {
+                    transform: scaleY(0);
+                }
+            }
+        }
+
+        @media (max-width: 48em) {
+            justify-content: center;
+
+            width: 100%;
+            height: 8.6rem;
+            border-radius: 20rem;
+
+            .btn__txt {
+                font-size: 3.2rem;
+                line-height: 3.8rem;
+            }
+        }
+    }
+
+    &_secondary {
+        padding: 10rem 3.2rem 3.2rem;
+
+        align-items: flex-start;
+        justify-content: flex-end;
+
+        width: 25.2rem;
+        height: 25.2rem;
+        border: 1px solid $red;
+        border-radius: 50%;
+
+        .btn__txt {
+            position: relative;
+
+            font-size: 2rem;
+            line-height: 2.3rem;
+            color: $red;
+
+            &::after {
+                content: '';
+
+                position: absolute;
+                bottom: -0.8rem;
+                left: 100%;
+
+                width: 5.4rem;
+                height: 1.8rem;
+
+                background: url('../images/icons/arr-red.svg') center / contain no-repeat;
+
+                transform: translate(-100%, 100%);
+
+                transition:
+                    transform 0.5s ease,
+                    left 0.5s ease;
+            }
+        }
+
+        &_red {
+            @media (min-width: 48em) {
+                border: none;
+
+                background-color: $red;
+
+                .btn__txt {
+                    color: $white;
+
+                    &::after {
+                        background: url('../images/icons/arr-white.svg') center / contain no-repeat;
+                    }
+                }
+            }
+        }
+
+        @media (any-hover: hover) and (min-width: 48em) {
+            &:hover {
+                .btn__txt::after {
+                    left: 50%;
+
+                    transform: translate(-50%, 100%);
+                }
+            }
+        }
+
+        @media (max-width: 48em) {
+            padding: 0;
+
+            justify-content: flex-start;
+            align-items: center;
+
+            height: 8.6rem;
+            width: 100%;
+            border-radius: 20rem;
+
+            .btn__txt {
+                padding: 2.4rem 4rem;
+
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+
+                font-size: 3.2rem;
+                line-height: 3.8rem;
+
+                &::after {
+                    position: static;
+
+                    width: 6.4rem;
+                    height: 2rem;
+
+                    transform: none;
+                }
+            }
+        }
+    }
+
+    &__txt {
+        font-family: 'Roboto Condensed';
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+}
+
+.i-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 6rem;
+    height: 6rem;
+    border: 1px solid $red;
+    border-radius: 50%;
+
+    &_bg {
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+
+    svg {
+        width: 3rem;
+    }
+
+    &_arr-next._has-hover,
+    &_arr-prev._has-hover {
+        svg {
+            transition: transform 0.5s ease;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                &.i-btn_arr-prev {
+                    svg {
+                        transform: translateX(-0.8rem);
+                    }
+                }
+                &.i-btn_arr-next {
+                    svg {
+                        transform: translateX(0.8rem);
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 48em) {
+        width: 11rem;
+        height: 11rem;
+
+        svg {
+            width: 4.8rem;
+        }
+    }
+}
