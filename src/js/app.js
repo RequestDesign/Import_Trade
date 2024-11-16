@@ -48,3 +48,4 @@ import './lib/video';
 
 import './dev/vzmsk1.js';
 import './dev/markusDM.js';
+import './dev/zatz.js';

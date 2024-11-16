@@ -69,12 +69,13 @@ function processNestedHtml(content, loaderContext, resourcePath = '') {
         const filePath = path.resolve(fileDir, src);
         loaderContext.dependency(filePath);
         let html = fs.readFileSync(filePath, 'utf8');
-        console.log('filePath: ', filePath, 'match: ', match);
+
+
         try {
-            console.log('data: ', dataText);
-            const data = dataText && JSON.parse(dataText);
             const dom = new JSDOM(html);
             const document = dom.window.document;
+            const data = dataText && JSON.parse(dataText);
+          
             if (data) {
                 Object.keys(data).forEach((selector) => {
                     const elementData = data[selector];
@@ -102,7 +103,6 @@ function processNestedHtml(content, loaderContext, resourcePath = '') {
             // Рекурсивно обрабатываем вложенные компоненты
 
             html = processNestedHtml(html, loaderContext, filePath);
-            console.log('html: ', html);
         } catch (error) {
             console.error(`Error parsing data-text attribute: ${error.message}`);
         }
@@ -113,7 +113,6 @@ function processNestedHtml(content, loaderContext, resourcePath = '') {
     content = content.replace(INCLUDE_PATTERN, (match, pathRule, src, dataText) => {
         return replaceHtml(match, pathRule, src, dataText);
     });
-
     return content;
 }
 
@@ -190,38 +189,38 @@ module.exports = {
         }),
         fs.existsSync(videoSourcePath)
             ? new CopyPlugin({
-                  patterns: [
-                      {
-                          from: path.resolve(__dirname, './', 'src/assets/', 'images'),
-                          to: path.resolve(__dirname, './', 'dist/assets/', 'images'),
-                          noErrorOnMissing: true
-                      },
-                      {
-                          from: path.resolve(__dirname, './', 'src/assets/', 'fonts'),
-                          to: path.resolve(__dirname, './', 'dist/assets/', 'fonts'),
-                          noErrorOnMissing: true
-                      },
-                      {
-                          from: videoSourcePath,
-                          to: videoDestPath,
-                          noErrorOnMissing: true
-                      }
-                  ]
-              })
+                patterns: [
+                    {
+                        from: path.resolve(__dirname, './', 'src/assets/', 'images'),
+                        to: path.resolve(__dirname, './', 'dist/assets/', 'images'),
+                        noErrorOnMissing: true
+                    },
+                    {
+                        from: path.resolve(__dirname, './', 'src/assets/', 'fonts'),
+                        to: path.resolve(__dirname, './', 'dist/assets/', 'fonts'),
+                        noErrorOnMissing: true
+                    },
+                    {
+                        from: videoSourcePath,
+                        to: videoDestPath,
+                        noErrorOnMissing: true
+                    }
+                ]
+            })
             : new CopyPlugin({
-                  patterns: [
-                      {
-                          from: path.resolve(__dirname, './', 'src/assets/', 'images'),
-                          to: path.resolve(__dirname, './', 'dist/assets/', 'images'),
-                          noErrorOnMissing: true
-                      },
-                      {
-                          from: path.resolve(__dirname, './', 'src/assets/', 'fonts'),
-                          to: path.resolve(__dirname, './', 'dist/assets/', 'fonts'),
-                          noErrorOnMissing: true
-                      }
-                  ]
-              })
+                patterns: [
+                    {
+                        from: path.resolve(__dirname, './', 'src/assets/', 'images'),
+                        to: path.resolve(__dirname, './', 'dist/assets/', 'images'),
+                        noErrorOnMissing: true
+                    },
+                    {
+                        from: path.resolve(__dirname, './', 'src/assets/', 'fonts'),
+                        to: path.resolve(__dirname, './', 'dist/assets/', 'fonts'),
+                        noErrorOnMissing: true
+                    }
+                ]
+            })
     ],
 
     optimization: {

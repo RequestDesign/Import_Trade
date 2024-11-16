@@ -1,0 +1,11 @@
+@import '../sections/heading';
+@import '../sections/collection';
+@import '../sections/banner-wa';
+@import '../sections/adv-wholesale';
+@import '../sections/how-order';
+
+.col{
+    &-red{
+        color: $red;
+    }
+}

@@ -1,0 +1,121 @@
+.collections {
+    @include mobile {
+        & .container {
+            padding: 0;
+        }
+    }
+
+    &__heading {
+        margin-bottom: 5rem;
+
+        @include mobile {
+            padding: 0 2rem;
+            &+.collections__category>.collections__category-name{
+                margin-top:0 ;
+            }
+        }
+    }
+
+    &__category {
+        display: flex;
+        gap: 1.7rem;
+
+        @include mobile {
+            flex-direction: column;
+            gap: 3rem;
+        }
+
+        &-name {
+            flex-shrink: 0;
+            height: 100%;
+            margin-top: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1.6rem;
+
+            @include mobile {
+                flex-direction: row-reverse;
+                justify-content: space-between;
+                padding: 0 2rem;
+                margin-top: 12rem;
+                
+            }
+
+            &-logo {
+                width: 7.5rem;
+                height: 6rem;
+                display: flex;
+
+                @include mobile {
+                    width: auto;
+                    height: 4rem;
+                }
+
+                & img {
+                    object-fit: contain;
+                    object-position: center;
+                }
+
+            }
+        }
+
+        &-swiper {
+            background-color: rgba(0, 0, 0, 0.06);
+
+            &.swiper {
+                width: 100%;
+
+                @include desktop {
+
+
+                    & .swiper-wrapper {
+                        display: grid;
+                        grid-template-columns: repeat(6, 1fr);
+                        grid-auto-rows: 1fr;
+                    }
+                }
+            }
+
+            &-slide {
+                height: 35.7rem !important;
+                padding: 1.8rem;
+                box-sizing: border-box;
+                display: flex !important;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+
+                @include mobile {
+                    padding: 2rem;
+                    height: 44.6rem !important;
+                    border-right: 1px solid $gray;
+                }
+
+                &-img {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    flex-shrink: 1;
+                    overflow: hidden;
+
+                    & img {
+                        object-fit: contain;
+                        object-position: center;
+                    }
+                }
+
+                &-name {
+                    padding-top: 1.8rem;
+                    text-align: center;
+                    flex-shrink: 0;
+
+                    @include mobile {
+                        padding-top: 3.2rem;
+                       
+                    }
+                }
+            }
+
+        }
+    }
+}

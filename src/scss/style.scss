@@ -16,15 +16,17 @@ $red: #da251e;
 @import './fonts';
 
 // ----- base styles
-
+@import './mixins.scss';
 // base scss file
 @import './set';
+
 
 // html, body
 html.lock {
     overflow: hidden;
     touch-action: none;
 }
+
 html,
 body {
     overflow-x: clip;
@@ -61,9 +63,20 @@ main {
     }
 }
 
+.desktop {
+    @include mobile {
+        display: none !important;
+    }
+}
+
 ._mobile-only {
     @media (min-width: 48em) {
         display: none;
+    }
+}
+.mobile {
+    @include desktop {
+        display: none !important;
     }
 }
 
@@ -75,6 +88,7 @@ main {
         transition:
             opacity 0.8s ease,
             visibility 0.8s ease;
+
         &.swiper-slide-active {
             opacity: 1 !important;
             visibility: visible !important;
@@ -94,6 +108,7 @@ video {
 
 // ----- imports
 
+
 // header / footer
 @import './sections/header';
 @import './sections/footer';
@@ -103,3 +118,4 @@ video {
 
 @import './dev/vzmsk1';
 @import './dev/markusDM';
+@import './dev/zatz';

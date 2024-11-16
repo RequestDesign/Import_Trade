@@ -1,0 +1,80 @@
+.heading {
+    &__top {
+        display: flex;
+        padding: 2.6rem 0 4rem;
+        box-sizing: border-box;
+        gap: .8rem;
+        align-items: center;
+        flex-wrap: wrap;
+
+        @include mobile {
+            & .h_h1 {
+                width: 100%;
+                margin-bottom: 4.8rem;
+            }
+
+        }
+
+        & .btn-social:first-of-type {
+            @include desktop {
+                margin-left: auto;
+            }
+        }
+
+        & .btn_primary {
+            margin-left: 2.4rem;
+
+            @include mobile {
+                width: fit-content;
+                margin-left: auto;
+            }
+        }
+    }
+
+    &__img {
+        height: 60rem;
+        display: flex;
+
+        @include mobile {
+            height: 75rem;
+        }
+
+        &>img {
+            object-fit: cover;
+            object-position: top;
+            margin-bottom: 2rem;
+        }
+
+        &-triple {
+            box-sizing: border-box;
+            padding: 3.2rem;
+            border-top: 1px solid $gray;
+            border-bottom: none;
+            display: flex;
+            &:first-of-type{
+                border-right: 1px solid $gray;
+                border-left: none;
+            }
+            &:last-of-type{
+                border-left: 1px solid $gray;
+                border-right: none;
+            }
+            & img{
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+    }
+
+    &__footer {
+       
+        & p{
+            padding: 2rem 0;
+            box-sizing: border-box;
+           
+            border: 1px solid $gray;
+            border-left: none;
+            border-right: none;
+        }
+    }
+}

@@ -195,6 +195,7 @@
                         transform: translateX(-0.8rem);
                     }
                 }
+
                 &.i-btn_arr-next {
                     svg {
                         transform: translateX(0.8rem);
@@ -212,4 +213,34 @@
             width: 4.8rem;
         }
     }
+}
+
+
+.btn-social {
+    width: 5.6rem;
+    height: 5.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background-color: $red;
+    transition: background-color .5s;
+    @include mobile{
+        width: 8rem;
+        height: 8rem;
+    }
+
+    & svg{
+        max-width: 80%;
+        max-height: 80%;
+        transition: fill .5s;
+    }
+    @include hover{
+        background-color: $white;
+        & svg{
+            fill: $red;
+        }
+    }
+
 }

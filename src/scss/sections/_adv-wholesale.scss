@@ -1,0 +1,126 @@
+.adv-wholesale {
+
+    &__c {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 5rem;
+
+        &._eu {
+            & .adv-wholesale__c-cell {
+                @include desktop {
+                    height: 70rem;
+                }
+            }
+
+        }
+
+        &._fr {
+            & .adv-wholesale__c-cell {
+                @include desktop {
+                    height: 83rem;
+
+                }
+            }
+        }
+
+        @include mobile {
+            grid-template-columns: 100%;
+            grid-template-rows: 75rem auto 56rem auto;
+
+        }
+
+        &-cell,
+        & ._footer {
+            display: flex;
+            flex-direction: column;
+            gap: 2.4rem;
+            height: 61.6rem;
+            overflow: hidden;
+
+
+            @include mobile {
+                gap: 4.8rem;
+                height: auto;
+
+                &:nth-child(2) {
+                    grid-row: 1;
+                }
+
+                &:nth-child(3) {
+                    grid-row: 3;
+                }
+            }
+
+            & img {
+                object-fit: cover;
+                object-position: center;
+            }
+
+            & ul {
+                display: flex;
+                flex-direction: column;
+                gap: 1.6rem;
+                font-size: 2rem;
+                line-height: 2.3rem;
+
+                @media (max-width: 48em) {
+                    font-size: 3.2rem;
+                    line-height: 3.6rem;
+                }
+
+                & li {
+                    list-style: disc;
+                    list-style-position: inside;
+                }
+            }
+
+            & p {
+                font-size: 2rem;
+                line-height: 2.3rem;
+
+                @media (max-width: 48em) {
+                    font-size: 3.2rem;
+                    line-height: 3.6rem;
+                }
+            }
+
+            & h2 {
+                font-family: 'Roboto Condensed';
+                font-weight: 500;
+                text-transform: uppercase;
+                font-size: 4.8rem;
+                line-height: 5.6rem;
+
+                @media (max-width: 48em) {
+                    font-size: 5.2rem;
+                    line-height: 6rem;
+                }
+            }
+
+            & h3 {
+                font-family: 'Roboto Condensed';
+                font-weight: 500;
+                text-transform: uppercase;
+                font-size: 2.8rem;
+                line-height: 3.3rem;
+
+                @media (max-width: 48em) {
+                    font-size: 4rem;
+                    line-height: 4.6rem;
+                }
+            }
+        }
+
+        & ._footer {
+            height: fit-content;
+            gap: 1.6rem;
+            grid-column: 1 / span 2;
+
+            @include mobile {
+                grid-column: 1;
+                grid-row: 5;
+            }
+        }
+    }
+}
