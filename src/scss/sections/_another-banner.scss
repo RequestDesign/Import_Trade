@@ -1,0 +1,43 @@
+.another-banner{
+    &__c{
+        border: 1px solid $gray;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+       
+        @include mobile{
+            grid-template-columns: 100%;
+            gap: 2.4rem;
+            border: none;
+        }
+        &-side{
+            padding: 5.5rem;
+            box-sizing: border-box;
+            border-right: 1px solid $gray;
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            @include mobile{
+                border: none;
+                padding:4rem 0;
+            }
+            &:last-of-type{
+                border: none;
+                @include mobile{
+                    border-top: 1px solid $gray;
+                    border-bottom: 1px solid $gray;
+                    padding-bottom: 6rem;
+                }
+            }
+            & ul {
+                display: flex;
+                flex-direction: column;
+                gap: 1.5rem;
+                & li{
+                    list-style: disc;
+                    list-style-position: inside;
+                }
+            }
+        }
+
+    }
+}

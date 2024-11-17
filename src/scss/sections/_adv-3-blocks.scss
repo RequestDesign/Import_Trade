@@ -1,0 +1,44 @@
+.adv-3-blocks {
+    &__c {
+        @include mobile {
+            padding: 0;
+        }
+
+        &-swiper {
+            width: 100%;
+
+            @include mobile {
+                & .swiper-wrapper {
+                    padding-left: 2rem;
+                    padding-right: 2rem;
+                }
+
+            }
+
+            &-slide {
+                display: flex !important;
+                padding: 4rem 15rem 4rem 4rem;
+                box-sizing: border-box;
+                gap: 3rem;
+                border: 1px solid $gray;
+                height: 100%;
+                flex-direction: column !important;
+
+                @include mobile {
+                    padding: 4rem;
+                    min-height: 40rem !important;
+                    display: grid !important;
+                    grid-template-columns: min-content auto;
+                    grid-template-rows: min-content auto;
+                    gap: 5rem 2rem;
+                    padding-right: 4rem;
+
+                    & .txt18 {
+                        grid-column: 1 / span 2;
+                    }
+                }
+
+            }
+        }
+    }
+}
