@@ -32,6 +32,9 @@
             display: flex;
             flex-direction: column;
             gap: 1.6rem;
+            @include desktop{
+                width: 9.5rem;
+            }
 
             @include mobile {
                 flex-direction: row-reverse;
