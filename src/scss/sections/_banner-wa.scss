@@ -44,6 +44,34 @@
                 border-top: 1px solid $gray;
             }
 
+            &-row {
+                display: flex;
+                gap: 2rem;
+
+                @include mobile {
+                    flex-direction: column;
+                }
+
+                & .sale__btn {
+                  
+                    @include mobile{
+                        width: 100%;
+                    
+                    }
+                    &._wa{
+                        padding-right: 1rem;
+                        gap: 1rem;
+                        @include mobile{
+                            justify-content: space-between;
+                        }
+                    }
+
+                    & svg {
+                       position: relative;
+                    }
+                }
+            }
+
             &-link {
                 display: flex;
                 gap: 2rem;
@@ -54,7 +82,8 @@
                 align-items: center;
                 width: fit-content;
                 transition: background-color .5s, color .5s;
-                @include mobile{
+
+                @include mobile {
                     margin-left: auto;
                 }
 
