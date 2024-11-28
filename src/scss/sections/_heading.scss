@@ -51,6 +51,8 @@
             border-top: 1px solid $gray;
             border-bottom: none;
             display: flex;
+            width: 100%;
+            overflow: hidden;
             &:first-of-type{
                 border-right: 1px solid $gray;
                 border-left: none;

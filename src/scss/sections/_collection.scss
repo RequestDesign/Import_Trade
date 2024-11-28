@@ -41,6 +41,7 @@
                 justify-content: space-between;
                 padding: 0 2rem;
                 margin-top: 12rem;
+                align-items: flex-end;
                 
             }
 
@@ -51,13 +52,17 @@
 
                 @include mobile {
                     width: auto;
-                    height: 4rem;
+                    height: 8rem;
+                }
+                & picture{
+                    display: flex;
+                    & img {
+                        object-fit: contain;
+                        object-position: center;
+                    }
                 }
 
-                & img {
-                    object-fit: contain;
-                    object-position: center;
-                }
+               
 
             }
         }

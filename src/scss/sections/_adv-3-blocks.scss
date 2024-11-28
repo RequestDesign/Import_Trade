@@ -17,11 +17,11 @@
 
             &-slide {
                 display: flex !important;
-                padding: 4rem 15rem 4rem 4rem;
+                padding: 4rem 4rem 4rem 4rem;
                 box-sizing: border-box;
                 gap: 3rem;
                 border: 1px solid $gray;
-                height: 100%;
+                height: auto !important;
                 flex-direction: column !important;
 
                 @include mobile {

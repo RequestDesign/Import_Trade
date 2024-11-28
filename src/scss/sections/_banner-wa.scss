@@ -53,21 +53,28 @@
                 }
 
                 & .sale__btn {
-                  
-                    @include mobile{
+
+                    @include mobile {
                         width: 100%;
-                    
+
                     }
-                    &._wa{
+
+                    &._wa {
                         padding-right: 1rem;
                         gap: 1rem;
-                        @include mobile{
+
+                        @include mobile {
                             justify-content: space-between;
                         }
                     }
 
                     & svg {
-                       position: relative;
+                        width: 4rem;
+                        position: relative;
+
+                        @include mobile {
+                            width: 7rem;
+                        }
                     }
                 }
             }
