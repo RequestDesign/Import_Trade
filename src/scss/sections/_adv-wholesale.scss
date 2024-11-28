@@ -3,26 +3,10 @@
     &__c {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: auto auto;
         gap: 5rem;
 
-        &._eu {
-            & .adv-wholesale__c-cell {
-                @include desktop {
-                    height: 70rem;
-                }
-            }
 
-        }
-
-        &._fr {
-            & .adv-wholesale__c-cell {
-                @include desktop {
-                    height: 83rem;
-
-                }
-            }
-        }
 
         @include mobile {
             grid-template-columns: 100%;
@@ -35,8 +19,14 @@
             display: flex;
             flex-direction: column;
             gap: 2.4rem;
-            height: 61.6rem;
+
+            height: 100%;
             overflow: hidden;
+            position: relative;
+
+            @include desktop {
+                min-height: 60rem;
+            }
 
 
             @include mobile {
@@ -55,6 +45,14 @@
             & img {
                 object-fit: cover;
                 object-position: center;
+
+                @include desktop {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                }
             }
 
             & ul {
